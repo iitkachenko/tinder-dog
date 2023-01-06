@@ -3,7 +3,7 @@
 }
 
 body {
-    /* margin: 0; */
+    margin: 0 8px;
 }
 
 button {
@@ -49,7 +49,7 @@ header button img {
 }
 
 #tinder-gallery, header {
-    max-width: 600px;
+    max-width: 400px;
     margin: auto;
 }
 
