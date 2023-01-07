@@ -1,6 +1,5 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -9,11 +8,20 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo"><img src="./images/icon-profile.png"></a>
-            <button><img src="./images/logo.png"></button>
+            <a href="#" class="profile"><img src="./images/icon-profile.png"></a>
+            <button class="menu-btn"><img src="./images/logo.png"></button>
             <a href="#" class="chat"><img src="./images/icon-chat.png"></a>
+            <nav class="menu">
+                <ul>
+                    <a href="#" class="back">Go to Profiles</a>
+                    <a href="#" class="summary-btn">I liked </a>
+                    <a href="#" class="profile">My profile</a>
+                </ul>
+            </nav>
         </header>
-        <div id="tinder-gallery"></div>
+        <main>
+            <div id="tinder"></div>
+        </main>
         <script src="/index.js" type="module"></script>
     </body>
 </html>

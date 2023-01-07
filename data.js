@@ -25,6 +25,51 @@ const dogs = [
         hasBeenSwiped: false,
         hasBeenLiked: false,
         hasBeenNoped: false        
+    },
+    {
+        name: "Robin",
+        avatar: "images/dog1.jpg",
+        age: 45,
+        bio: "I'm a new man now. Literature. Calm. Vegetarianism.",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenNoped: false        
+    },
+    {
+        name: "Alvis",
+        avatar: "images/dog2.jpg",
+        age: 99,
+        bio: "I'm in my prime. Just started learning React.",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenNoped: false        
+    },
+    {
+        name: "Bear",
+        avatar: "images/dog3.jpg",
+        age: 28,
+        bio: "Let's go to the gym!!!",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenNoped: false        
+    },
+    {
+        name: "Yoda",
+        avatar: "images/dog4.jpg",
+        age: 28,
+        bio: "Do you like cosplay? May the Force be with you!",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenNoped: false        
+    },
+    {
+        name: "Alice",
+        avatar: "images/dog5.jpg",
+        age: 23,
+        bio: "Ready to change your relationship status?",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenNoped: false        
     }
 ];
 

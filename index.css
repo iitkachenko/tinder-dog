@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: 0 8px;
+    margin: 0 .5em;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -24,33 +24,118 @@ a:focus {
     outline: none;
 }
 
-a img, button img {
+img {
     display: block;
 }
+
+.center {
+    text-align: center
+}
+
+/*HEADER*/
 
 header {
     padding: 1.25em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header button {
-    border: 0;
     background: none;
     padding: 0;
 }
 
-.logo img,
-header button img {
+.profile, .chat {
+    border-radius: 50%;
+}
+
+.profile img {
     height: 2.62rem;
+}
+
+.profile:hover img, .chat:hover img {
+    filter: drop-shadow(0 0 10px #ddd);
+}
+
+
+.menu-btn {
+    background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
+    border-radius: 30px;
+    padding: 1em 2.5em;
+}
+
+.menu-btn:hover {
+   background: linear-gradient(270deg, #F93375 0%, #FA695A 100%); 
 }
 
 .chat img {
     height: 2.12rem;
 }
 
-#tinder-gallery, header {
+nav {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    height: 0;
+    z-index: 1;       
+    transition: .3s height;
+    overflow: hidden;
+}
+
+
+nav.expanded {
+    height: calc(9em + 5px);
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav.expanded ul {
+    background: #fff;    
+    box-shadow: 0 0 5px #000;
+}
+
+nav a.back,
+nav a.summary-btn,
+nav a.profile {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: firebrick;
+    text-decoration: none;
+    height: 3em;
+    line-height: 3em;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+}
+
+nav a.back:hover,
+nav a.summary-btn:hover,
+nav a.profile:hover {
+    /* border-bottom: 1px solid #ddd; */
+    box-shadow: none;
+}
+
+nav a.back:focus,
+nav a.summary-btn:focus,
+nav a.profile:focus {
+    border: 1px solid khaki;
+    box-shadow: none;
+}
+
+/*MAIN PAGE Tinder*/
+
+#tinder, header {
     max-width: 400px;
     margin: auto;
 }
@@ -89,6 +174,7 @@ header button img {
     bottom: 0;
     padding: 1em 0.75em;
     color: #fff;  
+    text-shadow: 0 0 2px #000;        
 }
 
 .dog-info h3{
@@ -99,8 +185,12 @@ header button img {
 .dog-info p {
     margin: .5em 0 0;
     font-size: 1.5rem;
-    color: #B7B7B7;
+    line-height: 1.4em;
+    text-shadow: 0 0 10px #000;            
+    color: gold;
 }
+
+/*Buttons*/
 
 .buttons-set {
     display: flex;
@@ -137,18 +227,16 @@ header button img {
     background: linear-gradient(#fff, #DBFFF4);
 }
 
-/* .next, #start {
-    font-weight: bold;
-} */
-
 .next:hover,
 #start:hover,
-#summary-btn:hover {
+.back:hover,
+.summary-btn:hover,
+nav .profile:hover {
     background: linear-gradient(#fff, #ddd);
     background-clip: padding-box;
 }
 
-#summary-btn {
+button.summary-btn, button.back {
     display: block;
     border: 3px solid #000;
     border-radius: 2em;
@@ -156,15 +244,13 @@ header button img {
     padding: 1em 2em;
     margin: 2em auto;
     transition: .5s background;
-}
+}   
 
-/* #summary-btn:hover {
-    background: linear-gradient(#fff, #ddd);
-} */
-
-#summary-btn:focus {
+.summary-btn:focus, button.back:focus {
     box-shadow: 0 0 0 2px khaki;
 }
+
+/*SUMMARY Page*/
 
 .summary {
     text-align: center;
@@ -195,4 +281,50 @@ header button img {
 #start {
     margin: auto;
     padding-block: 1.8em;
+}
+
+/*PROFILE Page*/
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: .5em auto 0;
+    transition: .2s all;
+    cursor: pointer;
+}
+
+.profile-image:hover {
+    transform: rotate(10deg);
+}
+
+.expanded .profile-image:hover {
+    transition: none;
+    transform: none;
+}
+
+.expanded .profile-image {
+    width: 100vw;
+    height:  auto;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.image-wrapper.expanded {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000d;
+}
+
+.profile-info {
+    padding: .5em 1.25em 0;
 }
