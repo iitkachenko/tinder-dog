@@ -152,13 +152,18 @@ nav a.profile:focus {
 
 .badge {
     position: absolute;
-    top: 10.3%;
+    /* top: 10.3%;
     left: 7%;
     width: 50%;
-    height: 25%;
+    height: 25%; */
+    top: 65px;
+    left: 15px;
+    width: 200px;
+    height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(-45deg);
+    z-index: 1;
 }
 
 .badge-like {
