@@ -26,8 +26,8 @@ function render(headerHandlers = true) {
 };
 
 function addHeaderHandlers() {
-    document.querySelectorAll('a.profile').
-        forEach(item => item.addEventListener('click', renderProfilePage));
+    document.querySelectorAll('a.profile')
+        .forEach(item => item.addEventListener('click', renderProfilePage));
     
     document.querySelector('.chat').addEventListener('click', renderChatPage);
     
@@ -61,8 +61,8 @@ function addTinderHandlers(badge, likeBtn, nopeBtn) {
                 renderNextCard();      
     });
     
-    document.querySelector('button.next').
-                addEventListener('click', () => renderNextCard(0, true));
+    document.querySelector('button.next')
+        .addEventListener('click', () => renderNextCard(0, true));
 }
 
 function renderNextCard(waitTime = 1000, next = false) {
